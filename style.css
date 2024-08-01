@@ -1,0 +1,93 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    background-color: #14336B;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: background-color 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+    overflow: hidden;
+    position: relative;
+}
+
+.text-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 0;
+    transition: width 1s cubic-bezier(0.42, 0, 0.58, 1);
+    height: 100%;
+}
+
+.mask {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+h2 {
+    margin: 0;
+    font-size: 5vw;
+    font-weight: 300;
+    font-family: serif;
+    color: white;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1), color 1s cubic-bezier(0.42, 0, 0.58, 1);
+}
+p {
+    color: red;
+    transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1), color 1s cubic-bezier(0.42, 0, 0.58, 1);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.line {
+    position: absolute;
+    height: 2.5rem;
+    width: 4px;
+    background-color: white;
+    animation: lineAnimation 1s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+}
+
+@keyframes lineAnimation {
+    0% { left: 0; }
+    100% { left: 100%; }
+}
+
+@keyframes Hero_animateIn__s7_mk {
+    0% { top: 50%; transform: translate(-50%, -50%); }
+    100% { top: 10%; transform: translate(-50%, 0); }
+}
+
+.text-reveal {
+    width: 100%;
+}
+
+.line-hidden {
+    display: none;
+}
+
+.move-up {
+    animation: Hero_animateIn__s7_mk 0.9s cubic-bezier(.4,.49,.47,.79) forwards;
+    color: black;
+    font-size: 6vw;
+    font-weight: 900;
+}
+
+.new-bg {
+    background-color: #F5F2F0;
+}
+
+
