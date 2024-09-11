@@ -91,3 +91,6 @@ p {
 }
 
 
+.section2  {
+    display: flex;
+}
